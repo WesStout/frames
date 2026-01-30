@@ -1,0 +1,73 @@
+﻿@page
+@model inputTest.Pages.Paintings.EditModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+    <div class="row g-2 mb-3">
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-header">
+                    Painting details
+                </div>
+                <div class="card-body">
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Id</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" readonly value="@Model.Painting.Id" />
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Title</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Title" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Artist</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Artist" class="form-control" />
+                            <span asp-validation-for="PaintingDto.Artist" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Year</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Year" class="form-control" />
+                            <span asp-validation-for="PaintingDto.Year" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting fileType</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.fileType" class="form-control" />
+                            <span asp-validation-for="PaintingDto.fileType" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting data</label>
+                        <div class="col-sm-8">
+
+                            <input asp-for="PaintingDto.data" class="form-control" type="file" />
+                            <span asp-validation-for="PaintingDto.data" class="text-danger"></span>
+
+                            @if (Model.PaintingDto?.data != null)
+                            {
+                                var file = Model.PaintingDto.data;
+                                using var ms = new System.IO.MemoryStream();
+                                await file.CopyToAsync(ms);
+                                var bytes = ms.ToArray();
+                                var base64 = System.Convert.ToBase64String(bytes);
+                                var contentType = file.ContentType ?? Model.PaintingDto.fileType ?? "application/octet-stream";
+                                <div class="mt-3">
+                                    <img src="@($"data:{contentType};base64,{base64}")" class="img-fluid" alt="Painting image" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary me-2"> Submit </button>
+    <a class="btn btn-outline-primary" asp-page="/Paintings/Index" role="button">Cancel</a>
+</form>

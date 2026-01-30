@@ -1,0 +1,40 @@
+﻿using inputTest.Data;
+using inputTest.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace inputTest.Pages.Paintings
+{
+    public class CreateModel : PageModel
+    {
+        private readonly ApplicationDbContext _context;
+        public CreateModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        [BindProperty]
+        public PaintingDto PaintingDto { get; set; } = new();
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPost() {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToPage("/Paintings/Index");
+            }
+            var painting = new Painting
+            {
+                Title = PaintingDto.Title,
+                Artist = PaintingDto.Artist,
+                Year = PaintingDto.Year,
+                data = PaintingDto.data,
+                fileType = PaintingDto.fileType
+            };
+            _context.Paintings.Add(painting);
+            _context.SaveChanges();
+            return RedirectToPage("/Paintings/Index");
+        }
+    }
+}

@@ -1,0 +1,58 @@
+﻿using inputTest.Data;
+using inputTest.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace inputTest.Pages.Paintings
+{
+    public class CreateModel : PageModel
+    {
+        [BindProperty]
+        public PaintingDto PaintingDto { get; set; } = new();
+        private readonly ApplicationDbContext _context;
+        public CreateModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            byte[] fileBytes = Array.Empty<byte>();
+            if (PaintingDto.data != null && PaintingDto.data.Length > 0)
+            {
+                using var ms = new MemoryStream();
+                await PaintingDto.data.CopyToAsync(ms);
+                fileBytes = ms.ToArray();
+            }
+
+            var painting = new Painting
+            {
+                Title = PaintingDto.Title,
+                Artist = PaintingDto.Artist,
+                Year = PaintingDto.Year,
+                data = fileBytes,
+                fileType = PaintingDto.data?.ContentType ?? PaintingDto.fileType
+            };
+
+            _context.Paintings.Add(painting);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("/Paintings/Index");
+        }
+
+        
+        }
+    }

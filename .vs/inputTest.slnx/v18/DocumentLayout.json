@@ -1,0 +1,385 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wesdi\\source\\repos\\inputTest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\editor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\editor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\editor.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\editor.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Frames.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\areas\\identity\\pages\\account\\manage\\userframes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\userframes.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\models\\framedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:models\\framedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\models\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:models\\frame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\areas\\identity\\pages\\account\\manage\\userframes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\userframes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\frames\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\frames\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|c:\\users\\wesdi\\source\\repos\\inputtest\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{24A2C356-8FAF-C3AA-6695-2EE70249C2E5}|inputTest.csproj|solutionrelative:pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Paintings.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrameDto.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Models\\FrameDto.cs",
+              "RelativeDocumentMoniker": "Models\\FrameDto.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Models\\FrameDto.cs",
+              "RelativeToolTip": "Models\\FrameDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T05:03:59.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\Frames\\Create.cshtml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T04:27:12.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Create.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Create.cshtml",
+              "RelativeToolTip": "Pages\\Frames\\Create.cshtml",
+              "ViewState": "AgIAAEsDAAAAAAAAAAAWwGQDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-22T18:59:38.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Editor.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Editor.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Editor.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Editor.cshtml",
+              "RelativeToolTip": "Pages\\Frames\\Editor.cshtml",
+              "ViewState": "AgIAANQCAAAAAAAAAAAAwOkCAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-02T22:12:58.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.Frames.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Frames.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Frames.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-28T04:45:14.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAFkMAAAAAAAAAAAAwGcMAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-27T02:35:05.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Editor.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Editor.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Editor.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Editor.cshtml.cs",
+              "RelativeToolTip": "Pages\\Frames\\Editor.cshtml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwD0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T04:32:12.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Frame.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Models\\Frame.cs",
+              "RelativeDocumentMoniker": "Models\\Frame.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Models\\Frame.cs",
+              "RelativeToolTip": "Models\\Frame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T05:04:17.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserFrames.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAA8wCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T03:42:01.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserFrames.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\UserFrames.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T03:37:22.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T04:47:21.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T22:09:59.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-27T03:39:00.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwB0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T21:43:50.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T03:27:03.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-27T03:27:05.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T21:45:18.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\Frames\\Edit.cshtml.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T23:19:03.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Frames\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Frames\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\Frames\\Edit.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA8AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T23:20:29.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Error.cshtml",
+              "RelativeToolTip": "Pages\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T23:24:14.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\wesdi\\source\\repos\\inputTest\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T23:23:53.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "dbo.AspNetUsers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.AspNetUsers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-26T22:28:10.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "dbo.Paintings.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Paintings.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_inputTest_946edc1a_0b26_4cef_b467_3f7a9cb929eb/True/SqlTable/dbo.Paintings.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-26T22:32:27.573Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

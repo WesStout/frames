@@ -1,0 +1,29 @@
+﻿using inputTest.Data;
+using inputTest.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
+
+namespace inputTest.Pages.Paintings
+{
+    public class CreateModel : PageModel
+    {
+        [BindProperty]
+        public PaintingDto PaintingDto { get; set; } = new();
+        private readonly ApplicationDbContext _context;
+        public CreateModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        
+        public void OnGet()
+        {
+        }
+
+        
+        }
+    }
+
+
+}

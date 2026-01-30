@@ -1,0 +1,60 @@
+﻿using inputTest.Data;
+using inputTest.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Http;
+
+namespace inputTest.Pages.Paintings
+{
+    public class CreateModel : PageModel
+    {
+        private readonly ApplicationDbContext _context;
+        public CreateModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        [BindProperty]
+        public PaintingDto PaintingDto { get; set; } = new();
+        public void OnGet()
+        {
+        }
+
+        public async Task<IActionResult> OnPost()
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToPage("/Paintings/Index");
+            }
+
+            byte[] fileBytes = Array.Empty<byte>();
+            if (PaintingDto.DataFile != null && PaintingDto.DataFile.Length > 0)
+            {
+                using var ms = new MemoryStream();
+                await PaintingDto.DataFile.CopyToAsync(ms);
+                fileBytes = ms.ToArray();
+            }
+
+            var painting = new Painting
+            {
+                Title = PaintingDto.Title,
+                Artist = PaintingDto.Artist,
+                Year = PaintingDto.Year,
+                data = fileBytes,
+                fileType = PaintingDto.fileType ?? PaintingDto.DataFile?.ContentType
+            };
+            _context.Paintings.Add(painting);
+            await _context.SaveChangesAsync();
+            return RedirectToPage("/Paintings/Index");
+        }
+    }
+
+    public class PaintingDto
+    {
+        public string Title { get; set; }
+        public string Artist { get; set; }
+        public int Year { get; set; }
+        public IFormFile DataFile { get; set; }
+        public string fileType { get; set; }
+    }
+}

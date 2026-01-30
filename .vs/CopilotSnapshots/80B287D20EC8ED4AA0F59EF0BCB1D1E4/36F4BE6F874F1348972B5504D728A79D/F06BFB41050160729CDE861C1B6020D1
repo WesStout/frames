@@ -1,0 +1,54 @@
+﻿@page
+@model inputTest.Pages.Paintings.CreateModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+    <div class="row g-2 mb-3">
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-header">
+                    Painting details
+                </div>
+                <div class="card-body">
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Title</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Title" class="form-control" />
+                            <span asp-validation-for="PaintingDto.Title" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Artist</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Artist" class="form-control" />
+                            <span asp-validation-for="PaintingDto.Artist" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting Year</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.Year" class="form-control" />
+                            <span asp-validation-for="PaintingDto.Year" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting fileType</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.fileType" class="form-control" />
+                            <span asp-validation-for="PaintingDto.fileType" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <label class="col-sm-4 col-form-label"> Painting data</label>
+                        <div class="col-sm-8">
+                            <input asp-for="PaintingDto.DataFile" class="form-control" type="file" />
+                            <span asp-validation-for="PaintingDto.DataFile" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary me-2"> Submit </button>
+    <a class="btn btn-outline-primary" asp-page="/Paintings/Index" role="button">Cancel</a>
+</form>

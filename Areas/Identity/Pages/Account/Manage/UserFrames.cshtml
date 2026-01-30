@@ -1,0 +1,14 @@
+﻿@page
+@model inputTest.Areas.Identity.Pages.Account.Manage.UserFramesModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.UserFrames;
+}
+
+<p>@Html.DisplayNameFor(model => model.Username)</p>
+
+@foreach (var item in Model.Frames)
+{
+    var str = "/Frames/Editor?id=" + item.FrameId;
+    <a href=@str>@Html.DisplayFor(modelItem => item.FrameId)</a>
+}

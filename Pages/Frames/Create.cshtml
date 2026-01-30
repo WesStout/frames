@@ -1,0 +1,1510 @@
+﻿@page
+@model inputTest.Pages.Frames.CreateModel
+@{
+    ViewData["species"] = "walnut";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+<div class="layoutGrid">
+    <div class="editorItem" id="popupEditorItem">
+        <div class="popups">
+            <div id="popup1">
+                <div class="centerElements">
+                    <div class="sizeAndScaleHeder">
+                        <h2>Uploaded image's scale and size</h2>
+                    </div>
+                    <br>
+                    <div class="specs">
+                        <div class="specsItem">Width</div>
+                        <div class="specsItem">Height</div>
+                        <div class="specsItem">Ratio</div>
+                        <div class="specsItem" id="popupImagePixelWidth"></div>
+                        <div class="specsItem" id="popupImagePixelHeight"></div>
+                        <div class="specsItem" id="popupImagePixelRatio"></div>
+                    </div>
+                    <br>
+                    <div class="imageScale">
+                        <input onclick="setLock(true)" type="radio" id="original" name="imageScale" value="original" onclick="setScale()"></input>
+                        <label for="original">Use original image ratio</label>
+                        <input onclick="setLock(false)" type="radio" id="custom" name="imageScale" value="custom">
+                        <label for="custom">Use custom ratio</label>
+                    </div>
+                    <br>
+                    <div class="specsInput">
+                        <div class="specsItem">
+                            <label for="quantity">Width</label>
+                        </div>
+                        <div class="specsItem">
+                            <p>Lock</p>
+                        </div>
+                        <div class="specsItem">
+                            <label for="quantity">Height</label>
+                        </div>
+                        <div class="specsItem">
+                        </div>
+                        <div class="specsItem">
+                            <label for="quantity">Pixels Per Inch</label>
+                        </div>
+
+                        <div class="specsItem">
+                            <input type="number" id="popupUploadInchWidth" name="quantity" min="1" max="36" onchange="updatePopupPPI()">
+                        </div>
+                        <div class="specsItem">
+                        </div>
+                        <div class="specsItem">
+                            <input type="number" id="popupUploadInchHeight" name="quantity" min="1" max="36" onchange="updatePopupPPI()">
+                        </div>
+                        <div class="specsItem">
+                        </div>
+                        <div class="specsItem">
+                            <label id="popupUploadPPI"></label>
+                        </div>
+                    </div>
+                    <div class="sizeWarning">
+                        <p>Size warning: </p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="clearLastPopup()">Next</button>
+
+            </div>
+            <div id="popup2">
+                <container class="fileUploadHeader">
+                    <h2>Upload file</h2>
+                </container>
+                <div class="popupFileGrid">
+                    <div class="file-upload popupFileGridItem">
+                        <input type="file" class="uploadNewPicture" id="popupFileUpload">
+                        <div class="popupImageDisplay">
+                            <img class="img-fluid" id="popupImageChosen" alt="picture" />
+                        </div>
+                    </div>
+                    <div class="popupFileGridItem">
+                        <div class="popupPictureGrid">
+                            <container id="popupPictureGrid">Or Choose one of these images</container>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic1')" src="https://time.com/redesign/_next/image/?url=https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2025%2F11%2Ftime-top-100-photos-2025-051.jpg&w=3840&q=75" class="img-fluid popupImages" id="popupPic1" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic2')"  src="https://time.com/redesign/_next/image/?url=https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2025%2F11%2Ftime-top-100-photos-2025-058.jpg&w=3840&q=75" class="img-fluid popupImages" id="popupPic2" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic3')" src="https://www.ap.org/wp-content/uploads/2025/12/YE_Global_Best_of_2025_Photo_Gallery_25332087174214.jpg" class="img-fluid popupImages" id="popupPic3" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic4')" src="https://www.ap.org/wp-content/uploads/2025/12/YE_Global_Best_of_2025_Photo_Gallery_25332086284756.jpg" class="img-fluid popupImages" id="popupPic4" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic5')" src="https://www.ap.org/wp-content/uploads/2025/12/YE_Global_Best_of_2025_Photo_Gallery_25332086627049.jpg" class="img-fluid popupImages" id="popupPic5" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic6')" src="https://www.ap.org/wp-content/uploads/2025/12/YE_Global_Best_of_2025_Photo_Gallery_25332086399785.jpg" class="img-fluid popupImages" id="popupPic6" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic7')" src="https://petapixel.com/assets/uploads/2025/12/TopPhotos2025_0021_2.jpg" class="img-fluid popupImages" id="popupPic7" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic8')" src="https://time.com/redesign/_next/image/?url=https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2025%2F11%2Ftime-top-100-photos-2025-006.jpg&w=3840&q=75" class="img-fluid popupImages" id="popupPic8" alt="picture" />
+                            </div>
+                            <div class="popupPictureGridItem">
+                                <img onclick="setPopupImage('popupPic9')" src="https://time.com/redesign/_next/image/?url=https%3A%2F%2Fapi.time.com%2Fwp-content%2Fuploads%2F2025%2F11%2Ftime-top-100-photos-2025-104.jpg%3Fquality%3D85%26w%3D1520%26h%3D1140%26crop%3D1&w=3840&q=75" class="img-fluid popupImages" id="popupPic9" alt="picture" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="popupNextButton" onclick="clearPopup2()">Next</button>
+                @* Duplicate to get fuller dimensions *@
+                <img class="img-fluid" id="popupImageChosenDuplicate" style="transform:translateY(2000px)" alt="picture" />
+            </div>
+        </div>
+    </div>
+    <div class="editorItem doNotShow">
+        <div id="editorGrid">
+            <div class="frameItem"></div>
+            <div class="frameItem">
+                <container class="horizontalStretch topHorizontalButtons">
+                    <button class="sliderButton horizontalButton doNotShow" id="topBtn1">V</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="topBtn2">V</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="topBtn3">V</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="topBtn4">V</button>
+                </container>
+            </div>
+            <div class="frameItem">
+                <div class="frameItem">
+                </div>
+            </div>
+            <div class="frameItem setGridTrue">
+                <div class="verticalStretch leftVerticalButtons">
+                    <button class="sliderButton verticalButton doNotShow" id="leftBtn1"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="leftBtn2"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="leftBtn3"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="leftBtn4"></button>
+                </div>
+            </div>
+            <div class="frameItem" id="frameGridItem">
+                <div class="frameGrid" id="frameGrid">
+                    <div class="topItem" id="Top1"></div>
+                    <div class="topItem doNotShow" id="Top2"></div>
+                    <div class="topItem doNotShow" id="Top3"></div>
+                    <div class="topItem doNotShow" id="Top4"></div>
+                    <div class="topItem doNotShow" id="Top5"></div>
+                    <div class="rightItem" id="Right1"></div>
+                    <div class="rightItem doNotShow" id="Right2"></div>
+                    <div class="rightItem doNotShow" id="Right3"></div>
+                    <div class="rightItem doNotShow" id="Right4"></div>
+                    <div class="rightItem doNotShow" id="Right5"></div>
+                    <div id="centerImage">
+                        <img class="img-fluid loadPicture" id="pic" alt="picture"/>
+                    </div>
+                    <div class="leftItem" id="Left1"></div>
+                    <div class="leftItem doNotShow" id="Left2"></div>
+                    <div class="leftItem doNotShow" id="Left3"></div>
+                    <div class="leftItem doNotShow" id="Left4"></div>
+                    <div class="leftItem doNotShow" id="Left5"></div>
+                    <div class="bottomItem" id="Bottom1"></div>
+                    <div class="bottomItem doNotShow" id="Bottom2"></div>
+                    <div class="bottomItem doNotShow" id="Bottom3"></div>
+                    <div class="bottomItem doNotShow" id="Bottom4"></div>
+                    <div class="bottomItem doNotShow" id="Bottom5"></div>
+                </div>
+            </div>
+            <div class="frameItem setGridTrue">
+                <div class="verticalStretch rightVerticalButtons">
+                    <button class="sliderButton verticalButton doNotShow" id="rightBtn1"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="rightBtn2"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="rightBtn3"></button>
+                    <button class="sliderButton verticalButton doNotShow" id="rightBtn4"></button>
+                </div>
+            </div>
+            <div class="frameItem"></div>
+            <div class="frameItem">
+                <container class="horizontalStretch bottomHorizontalButtons">
+                    <button class="sliderButton horizontalButton doNotShow" id="bottomBtn1">Λ</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="bottomBtn2">Λ</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="bottomBtn3">Λ</button>
+                    <button class="sliderButton horizontalButton doNotShow" id="bottomBtn4">Λ</button>
+                </container>
+            </div>
+            <div class="frameItem"></div>
+        </div>
+    </div>
+    <div class="editItem doNotShow" id="dropDownEditItem">
+        <div class="pieceList">
+            <div class="sideList">
+                <div class="editItemHeaderGrid">
+                    <p class="editHeader editItemHeaderGridItem">Left</p>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="addLeftButton()">+</button>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="removeLeftButton()">-</button>
+                </div>
+                <div class="pieceButtonGrid">
+                    @{
+                        string[] strFilesLeft = Directory.GetFiles("wwwroot/thumbnails/");
+                        string strFileNameLeft = string.Empty;
+                        int indexLeft = 1;
+                        while (indexLeft < 6)
+                        {
+                            string dropDownButtonFunc = "onclick=toggleDropDownLeft" + indexLeft + "()" + "";
+                            string dropDownButtonId = "id=dropDownButtonLeft" + indexLeft;
+                            string dropDownButtonClass = "class=dropDownButton";
+                            string dropDownId = "id=dropDownLeft" + indexLeft;
+                            string dropDownContentClass = "class=dropDownContent";
+                            string thumbnailId = "id=thumbnailLeft" + indexLeft;
+                            string srcString = "src=../thumbnails/" + @ViewData["species"] + ".jpg";
+                            <container class="pieceItem">
+                                @indexLeft
+                                <img class="thumbnail" @thumbnailId @srcString>
+                                <div class="dropdown">
+                                    <button @dropDownButtonClass @dropDownButtonId @dropDownButtonFunc>V</button>
+                                    <div @dropDownContentClass @dropDownId>
+                                        @foreach (var strFile in strFilesLeft)
+                                        {
+                                            strFileNameLeft = System.IO.Path.GetFileName(strFile);
+                                            if (strFileNameLeft != "blank.jpg")
+                                            {
+                                                string onClickFunction = "onclick=changeThumbnail('" + @strFileNameLeft + ",Left" + @indexLeft + "')";
+                                                <button class="dropDownSpeciesButton" @onClickFunction>
+                                                    <img class="thumbnail" src="@Url.Content("../thumbnails/" + strFileNameLeft)" alt="picture" />
+                                                    @strFileNameLeft.Split('.')[0]
+                                                </button>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </container>
+                            indexLeft++;
+                        }
+                    }
+                </div>
+            </div>
+            <div class="sideList">
+                <div class="editItemHeaderGrid">
+                    <p class="editHeader editItemHeaderGridItem">Right</p>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="addRightButton()">+</button>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="removeRightButton()">-</button>
+                </div>
+                <div class="pieceButtonGrid">
+                    @{
+                        string[] strFilesRight = Directory.GetFiles("wwwroot/thumbnails/");
+                        string strFileNameRight = string.Empty;
+                        int indexRight = 1;
+                        while (indexRight < 6)
+                        {
+                            string dropDownButtonFunc = "onclick=toggleDropDownRight" + indexRight + "()" + "";
+                            string dropDownButtonId = "id=dropDownButtonRight" + indexRight;
+                            string dropDownButtonClass = "class=dropDownButton";
+                            string dropDownId = "id=dropDownRight" + indexRight;
+                            string dropDownContentClass = "class=dropDownContent";
+                            string thumbnailId = "id=thumbnailRight" + indexRight;
+                            string srcString = "src=../thumbnails/" + @ViewData["species"] + ".jpg";
+                            <container class="pieceItem">
+                                @indexRight
+                                <img class="thumbnail" @thumbnailId @srcString>
+                                <div class="dropdown">
+                                    <button @dropDownButtonClass @dropDownButtonId @dropDownButtonFunc>V</button>
+                                    <div @dropDownContentClass @dropDownId>
+                                        @foreach (var strFile in strFilesRight)
+                                        {
+                                            strFileNameRight = System.IO.Path.GetFileName(strFile);
+                                            if (strFileNameRight != "blank.jpg")
+                                            {
+                                                string onClickFunction = "onclick=changeThumbnail('" + @strFileNameRight + ",Right" + @indexRight + "')";
+                                                <button class="dropDownSpeciesButton" @onClickFunction>
+                                                    <img class="thumbnail" src="@Url.Content("../thumbnails/" + strFileNameRight)" alt="picture" />
+                                                        @strFileNameRight.Split('.')[0]
+                                                </button>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </container>
+                            indexRight++;
+                        }
+                    }
+                </div>
+            </div>
+            <div class="sideList">
+                <div class="editItemHeaderGrid">
+                    <p class="editHeader editItemHeaderGridItem">Top</p>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="addTopButton()">+</button>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="removeTopButton()">-</button>
+                </div>
+                <div class="pieceButtonGrid">
+                    @{
+                        string[] strFilesTop = Directory.GetFiles("wwwroot/thumbnails/");
+                        string strFileNameTop = string.Empty;
+                        int indexTop = 1;
+                        while (indexTop < 6)
+                        {
+                            string dropDownButtonFunc = "onclick=toggleDropDownTop" + indexTop + "()" + "";
+                            string dropDownButtonId = "id=dropDownButtonTop" + indexTop;
+                            string dropDownButtonClass = "class=dropDownButton";
+                            string dropDownId = "id=dropDownTop" + indexTop;
+                            string dropDownContentClass = "class=dropDownContent";
+                            string thumbnailId = "id=thumbnailTop" + indexTop;
+                            string srcString = "src=../thumbnails/" + @ViewData["species"] + ".jpg";
+                            <container class="pieceItem">
+                                @indexTop
+                                <img class="thumbnail" @thumbnailId @srcString>
+                                <div class="dropdown">
+                                    <button @dropDownButtonClass @dropDownButtonId @dropDownButtonFunc>V</button>
+                                    <div @dropDownContentClass @dropDownId>
+                                        @foreach (var strFile in strFilesTop)
+                                        {
+                                            strFileNameTop = System.IO.Path.GetFileName(strFile);
+                                            if (strFileNameTop != "blank.jpg")
+                                            {
+                                                string onClickFunction = "onclick=changeThumbnail('" + @strFileNameTop + ",Top" + @indexTop + "')";
+                                                <button class="dropDownSpeciesButton" @onClickFunction>
+                                                    <img class="thumbnail" src="@Url.Content("../thumbnails/" + strFileNameTop)" alt="picture" />
+                                                    @strFileNameTop.Split('.')[0]
+                                                </button>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </container>
+                            indexTop++;
+                        }
+                    }
+                </div>
+            </div>
+            <div class="sideList">
+                <div class="editItemHeaderGrid">
+                    <p class="editHeader editItemHeaderGridItem">Bottom</p>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="addBottomButton()">+</button>
+                    <button class="addRemoveButton editItemHeaderGridItem" type="button" onclick="removeBottomButton()">-</button>
+                </div>
+                <div class="pieceButtonGrid">
+                    @{
+                        string[] strFilesBottom = Directory.GetFiles("wwwroot/thumbnails/");
+                        string strFileNameBottom = string.Empty;
+                        int indexBottom = 1;
+                        while (indexBottom < 6)
+                        {
+                            string dropDownButtonFunc = "onclick=toggleDropDownBottom" + indexBottom + "()" + "";
+                            string dropDownButtonId = "id=dropDownButtonBottom" + indexBottom;
+                            string dropDownButtonClass = "class=dropDownButton";
+                            string dropDownId = "id=dropDownBottom" + indexBottom;
+                            string dropDownContentClass = "class=dropDownContent";
+                            string thumbnailId = "id=thumbnailBottom" + indexBottom;
+                            string srcString = "src=../thumbnails/" + @ViewData["species"] + ".jpg";
+                            <container class="pieceItem">
+                                @indexBottom
+                                <img class="thumbnail" @thumbnailId @srcString>
+                                <div class="dropdown">
+                                    <button @dropDownButtonClass @dropDownButtonId @dropDownButtonFunc>V</button>
+                                    <div @dropDownContentClass @dropDownId>
+                                        @foreach (var strFile in strFilesBottom)
+                                        {
+                                            strFileNameBottom = System.IO.Path.GetFileName(strFile);
+                                            if (strFileNameBottom != "blank.jpg")
+                                            {
+                                                string onClickFunction = "onclick=changeThumbnail('" + @strFileNameBottom + ",Bottom" + @indexBottom + "')";
+                                                <button class="dropDownSpeciesButton" @onClickFunction>
+                                                    <img class="thumbnail" src="@Url.Content("../thumbnails/" + strFileNameBottom)" alt="picture" />
+                                                    @strFileNameBottom.Split('.')[0]
+                                                </button>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </container>
+                            indexBottom++;
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Important! Add settingsGridTrue to class list after popup is clicked out of *@
+    <div class="editItem settingsItem doNotShow" id="settingsItem">
+        <div class="settingsGroup" id="startFrameCustomization">
+            <div class="headerButton">
+                @* TO DO: Only show submit button if using user uploaded image, dont save frames from starting popup *@
+                <button class="headerButtonItem" id="ajaxPostButton" name="ajaxPostButton">Save</button>
+            </div>
+            <div class="headerButton">
+                <button class="headerButtonItem" id="shoppingCartButton" name="shoppingCartButton">Add to cart</button>
+            </div>
+            <h5 id="totalCost">Total cost:</h5>
+            <h5 id="totalCostMoney">Money</h5>
+        </div>
+        <div class="settingsGroup" id="frameCustomization">
+            <ul id="accordion" class="accordion">
+                <li>
+                    <container>
+                        <h5 class="settingsHeader">Customize Frame</h5>
+                    </container>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-database"></i>Size<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="text" id="heightInput" name="heightInput" size="6" maxlength="6" placeholder="Height">
+                            <label for="heightInput">Height</label>
+                        </li>
+                        <br>
+                        <li>
+                            <input type="text" id="widthInput" name="widthInput" size="6" maxlength="6" placeholder="Width">
+                            <label for="widthInput">Width</label>
+                        </li>
+                        <br>
+                        <li>
+                            <button class="settingsButton" name="hAndWInput" onclick="submitMetrics()"></button>
+                            <label for="hAndWInput">Submit</label>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-code"></i>Corner supports<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <container>
+                                Selected:
+                                <img class="thumbnail" id="cornerSupportThumbnail" src="../thumbnails/blank.jpg">
+                            </container>
+                        </li>
+                        <br>
+                        @{
+                            string[] strFiles = Directory.GetFiles("wwwroot/thumbnails/");
+                            string strFileName = string.Empty;
+                        }
+                        @foreach (var strFile in strFiles)
+                        {
+                            strFileName = System.IO.Path.GetFileName(strFile);
+                            string species = strFileName.Split('.')[0];
+                            if (strFileName != "blank.jpg")
+                            {
+                                string onClickFunction = "onclick=changeCornerSupportThumbnail('" + @strFileName + "')";
+                                <li class="cornerSupportSpecies" @onClickFunction>
+                                    <input type="radio" id=@species name="supportSpecies" value=@species>
+                                    <label for=@species></label>
+                                    <img class="thumbnail" src="@Url.Content("../thumbnails/" + strFileName)" alt="picture" />
+                                    @species
+                                </li>
+                            }
+                        }
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-mobile"></i>Finish<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="radio" id="Matte" name="finish" value="Matte">
+                            <label for="Matte">Matte</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="Satin" name="finish" value="Satin">
+                            <label for="Satin">Satin</label>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-globe"></i>Glass or Acrylic<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="radio" id="Glass" name="glassoracrylic" value="Glass">
+                            <label for="Glass">Glass</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="Acrylic" name="glassoracrylic" value="Acrylic">
+                            <label for="Acrylic">Acrylic</label>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-globe"></i>Mounting<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="radio" id="Bracket" name="Mounting" value="Bracket">
+                            <label for="Bracket">Bracket</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="Wire" name="Mounting" value="Wire">
+                            <label for="Wire">Wire</label>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li class="addTopBorder">
+                    <container>
+                        <h5 class="settingsHeader">Settings</h5>
+                    </container>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-globe"></i>Upload a new picture<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="file" class="uploadNewPicture" id="uploadNewFileSetting">
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link"><i class="fa fa-globe"></i>Upload your own wall<i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu">
+                        <br>
+                        <li>
+                            <input type="file" class="uploadBackground">
+                        </li>
+                        <br>
+                        <li>
+                            <Button class="settingsButton" id="useBrickBackground" name="useBrickBackground" onclick="useBrickBackground()"></button>
+                            <label id="useBrickBackgroundLabel" for="useBrickBackground">Toggle brick background</label>
+
+                        </li>
+                        <br>
+                        <li>
+                            <input type="number" id="userWallZoom" name="userWallZoom" min="10" max="1000" onchange="changeWallZoom()">
+                            <label for="userWallZoom">% image zoom</label>
+                        </li>
+                        <br>
+
+                        <li>
+                            <div>
+                                <input type="color" id="backgroundColor" name="backgroundColor" value="#e66465" onchange="colorChange()" />
+                                <label for="backgroundColor">Background color</label>
+                            </div>
+                        </li>
+                        <br>
+                    </ul>
+                </li>
+                <li>
+                    <button class="settingsButton" id="dimButtons" name="dimButtons" onclick="dimButtons()"></button>
+                    <label id="dimButtonsLabel" for="dimButtons">Dim buttons</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="FrameDto.HeightInInches" id="heightToSave" type="number" class="form-control doNotShow"/>
+    <span asp-validation-for="FrameDto.HeightInInches" class="text-danger doNotShow"></span>
+    
+    <input asp-for="FrameDto.WidthInInches" id="widthToSave" type="number" class="form-control doNotShow"/>
+    <span asp-validation-for="FrameDto.WidthInInches" class="text-danger doNotShow"></span>
+    <p id="result"></p>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+<script>
+$(function() {
+var Accordion = function(el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+    // Variables privadas
+    var links = this.el.find('.link');
+    // Evento
+    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+}
+
+Accordion.prototype.dropdown = function(e) {
+    var $el = e.data.el;
+        $this = $(this),
+        $next = $this.next();
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+    if (!e.data.multiple) {
+        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+    };
+}
+let accordion = new Accordion($('#accordion'), false);
+});
+
+$(".uploadBackground").change(function(e) {
+        for (let i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+            let file = e.originalEvent.srcElement.files[i];
+            let img = document.getElementsByClassName("editorItem")[0];
+            let reader = new FileReader();
+            reader.onloadend = function() {
+                        img.style.backgroundImage = "url(" + reader.result + ")";
+            }
+            reader.readAsDataURL(file);
+        }
+});
+
+$(".uploadNewPicture").change(function(e) {
+    for (let i = 0; i < e.originalEvent.srcElement.files.length; i++) {
+        let file = e.originalEvent.srcElement.files[i];
+        let img = document.getElementById("pic");
+        let popupImageChosen = document.getElementById("popupImageChosen");
+        let popupImageChosenDuplicate = document.getElementById("popupImageChosenDuplicate");
+        let imageDataToSave = document.getElementById("imageDataToSave");
+        let reader = new FileReader();
+        reader.onloadend = function() {
+            img.src = reader.result;
+            popupImageChosen.src = reader.result;
+            popupImageChosenDuplicate.src = reader.result;
+        }
+        reader.readAsDataURL(file);
+        updateHeightAndWidthAndSaveDataPopup();
+    }
+});
+
+//Only fire this if user uploads image, don't save example images from starting popup
+document.getElementById("ajaxPostButton").addEventListener('click', async () => {
+    let popupFileUpload = document.getElementById("popupFileUpload");
+    if (popupFileUpload.files.length > 0) {
+        let file = popupFileUpload.files[0];
+        let form = document.querySelector("form");
+        let formData = new FormData(form);
+        let resultDiv = document.getElementById("result");
+        formData.append("FrameDto.HeightInInches", getHeight());
+        formData.append("FrameDto.WidthInInches", getWidth());
+        formData.append("FrameDto.Options", getOptions());
+        formData.append("FrameDto.ImageData", file);
+        formData.append("FrameDto.FrameData", getFrameData());
+        // The anti-forgery token is in a hidden field named "__RequestVerificationToken"
+        let response = await fetch("/Frames/Create", {
+            method: "POST",
+            body: formData
+        });
+        if (response.ok) {
+            let data = await response.text();
+            resultDiv.textContent = "Success: " + data;
+        } else {
+            resultDiv.textContent = "Error: " + response.statusText;
+        }
+    } 
+});
+
+</script>
+<script src="site.js"></script>
+<style>
+
+    body {
+        min-height: 100vh;
+        font-family: "DM Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+    }
+
+    .layoutGrid {
+        justify-content: center;
+        display: flex;
+        flex-wrap: nowrap;
+        position:relative;
+    }
+
+    @@media (min-width:320px) {
+        .layoutGrid {
+            flex-wrap: wrap;
+            min-height: 500px;
+        }
+
+        .editorItem {
+            width: 92vw;
+            max-height: 90%;
+            min-height: 500px;
+        }
+
+        #dropDownEditItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 92vw;
+            min-height: 500px;
+        }
+
+        #settingsItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 92vw;
+            min-height: 500px;
+        }
+        
+        .popupFileGrid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .popupPictureGridItem {
+            display: block;
+            max-width: 26%;
+        }
+    }
+
+    @@media (min-width:480px) {
+        .editorItem {
+            min-height: 550px;
+        }
+    }
+
+    @@media (min-width:600px) {
+        .popupPictureGridItem {
+            display: block;
+            max-width: 33%;
+        }
+    }
+
+    @@media (min-width:768px) {
+        .editorItem {
+            width: 92vw;
+        }
+
+        #dropDownEditItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 60vw;
+        }
+
+        #settingsItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 30vw;
+        }
+        
+        .popupFileGridItem {
+            width: 50%;
+        }
+       
+    }
+
+    @@media (min-width:1024px) {
+        .editorItem {
+            width: 50vw;
+            min-height: 570px;
+        }
+
+        .editItem {
+            min-height: 570px;
+        }
+
+        #dropDownEditItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 19vw;
+        }
+
+        #settingsItem {
+            padding: 5px;
+            justify-content: space-evenly;
+            width: 8vw;
+        }
+    }
+
+    /* Content below is for setting up picture frame grid that contains slider and buttons and image */
+    .editorItem {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .editItem {
+        position: relative;
+        display: flex;
+        height: 90%;
+        background-color: #e2e2e2;
+        flex-grow: 1;
+        flex-shrink: 1;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    #editorGrid {
+        display: grid;
+        /* Dummy variables are 10 80 10, actual values set after aspect ratio is obtained in ajavascript  */
+        grid-template-columns: 12fr 76fr 12fr;
+        grid-template-rows: 12fr 76fr 12fr;
+        justify-items: center;
+        align-items: center;
+        /* The max-height below can be used for different media to get the right height consistently */
+        max-height: 600px;
+        border-radius: 8px;
+    }
+
+    .frameItem {
+        align-content: center;
+        justify-self: center;
+    }
+    /* Content below is for second grid item that lists wood and has dropdown to edit wood type */
+    .editItemHeaderGrid {
+        display: grid;
+        grid-auto-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        height: 40px;
+        justify-items: center;
+        align-items: start;
+        border-bottom: 1px solid #121420;
+        border-radius: 5px;
+        padding-top: 3px;
+    }
+    
+    .editItemHeaderGridItem {
+        grid-row: 1;
+        padding: 5px;
+    }
+
+    .pieceList {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .sideList {
+        display: grid;
+        align-content: start;
+        border: 1px solid #121420;
+        border-radius: 8px;
+        margin: 2px;
+    }
+
+    .pieceButtonGrid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .pieceItem {
+        height: 45px;
+        min-width: 100%;
+        align-content: center;
+        padding: 5px;
+    }
+
+    /* Below is for dropdowns and rearranging/editing wood species buttons */
+    .thumbnail {
+        border: 1px solid #121420;
+        border-radius: 4px;
+        width: 17px;
+        margin: 2px;
+    }
+
+    .dropDownContent {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        position: absolute;
+        max-width: 100px;
+        max-height: 200px;
+        overflow: scroll;        
+    }
+
+    .addRemoveButton {
+        height: 25px;
+        width: 25px;
+        border-radius: 5px;
+        border: 1px solid #121420;
+        border-radius: 5px;
+        margin: 5px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-size: 19px;
+    }
+
+    .sliderButton {
+        height: 27px;
+        width: 27px;
+        border-radius: 5px;
+        border: 1px solid #121420;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .dropDownSpeciesButton {
+        z-index: 1;
+        border: 0px outset #806443;
+        display: flex;
+        min-width: 90px;
+        padding: 2px;
+        align-items: center;
+        /*
+        need to look at padding more since this is pushing the other editorItem down
+        width: 20px;
+        height: 20px; 
+        */
+    }
+
+    .dropDownButton {
+        background-color: #E1BB80;
+        color: white;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid #121420;
+    }
+
+    .dropDownButton:hover, .dropDownButton:focus {
+        background-color: #D29437;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .doNotShow {
+        display: none;
+    }
+
+    .showBackgroundBrick {
+        background-image: url('/backgrounds/brick.jpg');
+    }
+
+    .doNotShowBackgroundImage {
+        background-image: none;
+    }
+
+    .toggleDimmingButtons {
+        display: none;
+    }
+
+    button:disabled {
+        background-color: rgba(3,3,3,0.2);
+        color: #666;
+        cursor: not-allowed;
+
+    }
+
+    /* Content below is sliding buttons to edit wood lengths */
+    #frameGrid {
+        display: grid;
+        max-height: 74vh;
+        max-width: 74vw;
+        grid-template-columns: repeat(100, 1%);
+        grid-template-rows: repeat(100, 1%);
+        background: #ddd;
+    }
+
+    #frameGridItem {
+        max-height: 76vh;
+        max-width: 76vw;
+    }
+
+    .horizontalStretch {
+        justify-content: center;
+        align-content: center;
+        display: grid;
+    }
+
+    .verticalStretch {
+        height: 100px;
+        width: 30px;
+        min-width: 30px;
+        align-content: center;
+        display: grid;
+    }
+
+    .leftVerticalButtons {
+        justify-content: start;
+        max-height: 30px;
+        align-self: center;
+    }
+
+    .rightVerticalButtons {
+        justify-content: end;
+        max-height: 30px;
+        align-self: center;
+    }
+
+    .topHorizontalButtons {
+        justify-items: center;
+        max-width: 30px;
+        justify-self: center;
+    }
+
+    .bottomHorizontalButtons {
+        justify-items: center;
+        max-width: 30px;
+        justify-self: center;
+    }
+
+    .horizontalButton {
+        position: absolute;
+    }
+
+    .verticalButton {
+        position: absolute;
+        padding-bottom: 3px;
+    }
+
+    .setGridTrue {
+        display: grid;
+    }
+
+    /* Content below is for displaying image and frames*/
+    #centerImage {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #pic {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: scale-down;
+    }
+
+    .loadPicture {
+        overflow: hidden;
+    }
+
+    .leftItem {
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+        grid-column: 1;
+        grid-row: 1 / 4;
+        background-size: cover;
+    }
+
+    .rightItem {
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+        grid-column: 3;
+        grid-row: 1 / 4;
+        background-size: cover;
+    }
+
+    .topItem {
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+        grid-column: 1 / 4;
+        grid-row: 1;
+        background-size: cover;
+    }
+
+    .bottomItem {
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+        grid-column: 1 / 4;
+        grid-row: 3;
+        background-size: cover;
+    }
+
+    #Left1 {
+        @{
+            string styleStringV = "background-image: url(/images/" + @ViewData["species"] + "V.jpg);";
+        }
+        @styleStringV
+    }
+
+    #Right1 {
+        @styleStringV
+    }
+
+    #Top1 {
+        @{
+            string styleStringH = "background-image: url(/images/" + @ViewData["species"] + "H.jpg);";
+        }
+        @styleStringH
+    }
+
+    #Bottom1 {
+        @styleStringH
+    }
+
+    /* Drop down css */
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+    }
+    il {
+        padding: 0px;
+    }
+
+    a {
+        color: #b63b4d;
+        text-decoration: none;
+    }
+
+    .accordion {
+        /* width: 100%;
+        max-width: 360px;
+        background: #FFF; */
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    .accordion .link {
+        cursor: pointer;
+        display: block;
+        color: #4D4D4D;
+        font-size: 12px;
+        font-weight: 700;
+        position: relative;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .accordion li i {
+        position: absolute;
+        font-size: 12px;
+        color: #595959;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    .accordion li i.fa-chevron-down {
+        font-size: 12px;
+    }
+
+    .accordion li.open .link {
+        /* color: #b63b4d; */
+    }
+
+    .accordion li.open i {
+        /* color: #b63b4d; */
+    }
+
+    .accordion li.open i.fa-chevron-down {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    #accordion {
+        padding-left: 0px;
+    }
+
+    li {
+        padding: 3px;
+    }
+
+    .submenu {
+        display: none;
+        /* background: #444359; */
+        font-size: 12px;
+    }
+
+    .submenu a {
+        display: block;
+        text-decoration: none;
+        /* color: #d9d9d9; */
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+
+    .submenu a:hover {
+        /* background: #b63b4d;
+        color: #FFF; */
+    }
+
+    #settingsItem {
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr 5fr;
+    }
+
+    #dropDownEditItem {
+        height: 100%;
+    }
+    
+    .settingsGridTrue {
+        display: grid;
+    }
+
+    .settingsGroup {
+        grid-row:auto;
+    }
+
+    .settingsHeader{
+        padding-top:5px;
+    }
+
+    .settingsButton {
+        height: 15px;
+        width: 15px;
+        border-radius: 3px;
+        border: 1px solid #121420;
+    }
+
+    #backgroundColor {
+        border-radius:5px;
+        border: 1px solid #121420;
+        padding: 4px;
+    }
+
+    /* popups */
+
+    #popupEditorItem {
+        position: absolute;
+        /* min-height: 500px; */
+    }
+
+    .popups {
+        /* border: 1px solid #121420; */
+        border-radius: 5px;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+    }
+
+    #popup1 {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        /* padding: 20px; */
+    }
+
+    #popup2 {
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        /* padding: 20px; */
+        /* display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr; */
+    }
+
+
+    .popupFileGrid {
+        /* used in media css  */
+        background-color: white;
+    }
+
+    .popupFileGridItem {
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .popupPictureGrid {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+
+    #popupPictureGrid {
+        width: 100%;
+        justify-content: center;
+        display: grid;
+    }
+
+    .popupPictureGridItem {
+        /* used in media css  */
+    }
+    .popupImages:hover {
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .popupImages {
+        overflow: auto;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .fileUploadHeader {
+        justify-items: center;
+        display: block;
+        padding: 10px;
+        background-color: white;
+    }
+
+    .file-upload {
+        background-color: #ffffff;
+        margin: 0 auto;
+    }
+
+    .popupImageDisplay {
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .file-upload-btn {
+        width: 100%;
+        margin: 0;
+        background-color: #ffffff;
+        /* border: 4px dashed #E1BB80; */
+        padding: 10px;
+        border-radius: 4px;
+        /* transition: all .2s ease; */
+        outline: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .file-upload-btn:hover {
+        background-image: repeating-linear-gradient(180deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(270deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(0deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(90deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px);
+        background-size: 7px 100%, 100% 7px, 7px 100%, 100% 7px;
+        background-position: 0 0, 0 0, 100% 0, 0 100%;
+        background-repeat: no-repeat;
+        /* transition: all .2s ease; */
+        cursor: pointer;
+    }
+
+    .file-upload-btn:active {
+        border: 0;
+        transition: all .2s ease;
+    }
+
+    .file-upload-content {
+        display: none;
+        text-align: center;
+    }
+
+    .fileUploadInput {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        opacity: 0;
+        cursor: pointer;
+        
+    }
+
+    .fileDrop {
+        margin: 0;
+        background-color: #ffffff;
+        /* border: 4px dashed #E1BB80; */
+        padding: 10px;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .image-dropping,
+        .fileDrop:hover {
+            background-image: repeating-linear-gradient(180deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(270deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(0deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(90deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px);
+            background-size: 7px 100%, 100% 7px, 7px 100%, 100% 7px;
+            background-position: 0 0, 0 0, 100% 0, 0 100%;
+            background-repeat: no-repeat;
+        /* background-color: #E1BB80; */
+        border: 4px dashed #ffffff;
+    }
+
+    .image-title-wrap {
+        padding: 0 15px 15px 15px;
+        color: #222;
+    }
+
+    .popupNextButton {
+        display: block;
+        justify-self: right;
+        border: 1px solid #121420;
+        border-radius: 5px;
+        background-color:white;
+
+    }
+    .drag-text {
+        padding: 10px;
+        border: 2px solid #121420;
+        border-radius: 5px;
+    }
+
+    .popupBoxItem {
+        background-image: repeating-linear-gradient(180deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(270deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(0deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(90deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px);
+        background-size: 7px 100%, 100% 7px, 7px 100%, 100% 7px;
+        background-position: 0 0, 0 0, 100% 0, 0 100%;
+        background-repeat: no-repeat;
+    }
+
+    .popupBoxItemHover:hover {
+        background-image: repeating-linear-gradient(180deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(270deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(0deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px), repeating-linear-gradient(90deg, #e1bb80, #e1bb80 30px, transparent 30px, transparent 31px, #e1bb80 31px);
+        background-size: 7px 100%, 100% 7px, 7px 100%, 100% 7px;
+        background-position: 0 0, 0 0, 100% 0, 0 100%;
+        background-repeat: no-repeat;
+    }
+
+    #popupImageChosen {
+        padding: 10px;
+    }
+
+    .sizeAndScaleHeder {
+        justify-self: center;
+        display: block;
+        justify-items: center;
+    }
+
+    .specs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 30px 30px;
+        width: 100%
+    }
+
+    .specsInput {
+        display: grid;
+        grid-template-columns: 7fr 1fr 7fr 1fr 7fr;
+        grid-template-rows: 30px 30px;
+        justify-self: center;
+        width: 95%;
+    }
+
+    .specsItem {
+        display: grid;
+        height: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #pixelWidth {
+
+    }
+
+    #pixelHeight {
+    }
+
+    .imageScale {
+        justify-self: center;
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .inputs {
+        justify-self: center;
+        display: block;
+    }
+
+    .sizeWarning {
+        justify-self: center;
+        display: block;
+    }
+
+    #startFrameCustomization {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-bottom:2px solid black;
+        gap: 5px;
+    }
+
+    .saveButton {
+        display:grid;
+        align-self:end;
+
+    }
+    .headerButton {
+        height: 60px;
+    }
+
+    .headerButtonItem {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    .addTopBorder {
+        border-top: 2px solid black;
+    }
+
+    #totalCostMoney {
+        display: grid;
+        justify-items: end;
+    }
+</style>

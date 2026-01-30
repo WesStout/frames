@@ -1,0 +1,53 @@
+﻿using inputTest.Data;
+using inputTest.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections;
+using System.IO;
+
+namespace inputTest.Pages.Paintings
+{
+    public class EditModel : PageModel
+    {
+        [BindProperty]
+        public PaintingDto PaintingDto { get; set; } = new PaintingDto();
+
+        public Painting Painting { get; set; } = new Painting();
+
+        private readonly ApplicationDbContext _context;
+        public EditModel(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+        public IActionResult OnGet(int Id)
+        {
+            var painting = _context.Paintings.Find(Id);
+            if (painting == null)
+            {
+                return RedirectToPage("/Paintings/Index");
+            }
+
+            // create an IFormFile from the stored byte[] so the DTO can reuse the same shape as the Create page
+            IFormFile file = null;
+            if (painting.data != null && painting.data.Length > 0)
+            {
+                var ms = new MemoryStream(painting.data);
+                file = new FormFile(ms, 0, painting.data.Length, "data", "upload")
+                {
+                    Headers = new HeaderDictionary(),
+                    ContentType = painting.fileType ?? "application/octet-stream"
+                };
+            }
+
+            Painting = painting;
+            PaintingDto.Title = painting.Title;
+            PaintingDto.Artist = painting.Artist;
+            PaintingDto.Year = painting.Year;
+            PaintingDto.data = file;
+            PaintingDto.fileType = painting.fileType; 
+
+            return Page();
+        }
+    }
+}
